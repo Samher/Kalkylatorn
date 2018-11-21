@@ -75,7 +75,8 @@ namespace Kalkylatorn
 
         private void btn4_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "4";
+            displayLabel.Text = displayTxt;
         }
 
         private void btn5_Click(object sender, EventArgs e)
