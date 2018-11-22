@@ -21,15 +21,15 @@ namespace Kalkylatorn
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (displayTxt.Length > 0)
+            if (displayTxt.Length > 1 && displayTxt != "0")
             {
                 displayTxt = displayTxt.Remove(displayTxt.Length - 1, 1);
                 displayLabel.Text = displayTxt;
             }
             else
             {
-                displayTxt = "0";
-                displayLabel.Text = displayTxt;
+                displayTxt = "";
+                displayLabel.Text = "0";
             }
         }
 
