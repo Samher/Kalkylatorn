@@ -75,12 +75,13 @@ namespace Kalkylatorn
 
         private void btn4_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "5";
+            displayLabel.Text = displayTxt;
         }
 
         private void btn6_Click(object sender, EventArgs e)
