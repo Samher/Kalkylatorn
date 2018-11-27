@@ -54,7 +54,8 @@ namespace Kalkylatorn
 
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-
+            displayTxt = Math.Sqrt(stack[0]).ToString();
+            stackL1.Text = displayTxt;
         }
 
         private void numbtn_Click(object sender, EventArgs e)
@@ -72,29 +73,28 @@ namespace Kalkylatorn
             }
         }
 
-        private void btnDot_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            displayTxt = (stack[1] + stack[0]).ToString();
+            stackL1.Text = displayTxt;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            displayTxt = (stack[1] - stack[0]).ToString();
+            stackL1.Text = displayTxt;
         }
 
         private void btnGgr_Click(object sender, EventArgs e)
         {
-
+            displayTxt = (stack[1] * stack[0]).ToString();
+            stackL1.Text = displayTxt;
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-
+            displayTxt = (stack[1] / stack[0]).ToString();
+            stackL1.Text = displayTxt;
         }
 
         private void btnEq_Click(object sender, EventArgs e)
@@ -108,6 +108,11 @@ namespace Kalkylatorn
         }
 
         private void btnPct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stackL3_Click(object sender, EventArgs e)
         {
 
         }

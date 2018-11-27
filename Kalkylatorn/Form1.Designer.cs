@@ -69,6 +69,7 @@
             this.stackL3.TabIndex = 0;
             this.stackL3.Text = "0";
             this.stackL3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.stackL3.Click += new System.EventHandler(this.stackL3_Click);
             // 
             // btnBack
             // 
@@ -244,7 +245,7 @@
             this.btnDot.TabIndex = 16;
             this.btnDot.Text = ",";
             this.btnDot.UseVisualStyleBackColor = true;
-            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
+            this.btnDot.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btnPlus
             // 
@@ -319,7 +320,7 @@
             this.btnPow.Name = "btnPow";
             this.btnPow.Size = new System.Drawing.Size(48, 40);
             this.btnPow.TabIndex = 23;
-            this.btnPow.Text = "%";
+            this.btnPow.Text = "^";
             this.btnPow.UseVisualStyleBackColor = true;
             this.btnPow.Click += new System.EventHandler(this.btnPct_Click);
             // 
