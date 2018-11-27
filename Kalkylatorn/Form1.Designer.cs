@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.displayLabel = new System.Windows.Forms.Label();
+            this.stackL3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
@@ -52,21 +52,23 @@
             this.btnEq = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnPow = new System.Windows.Forms.Button();
+            this.stackL2 = new System.Windows.Forms.Label();
+            this.stackL1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // displayLabel
+            // stackL3
             // 
-            this.displayLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.displayLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.displayLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.displayLabel.Font = new System.Drawing.Font("BankGothic Lt BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLabel.ForeColor = System.Drawing.Color.Black;
-            this.displayLabel.Location = new System.Drawing.Point(13, 13);
-            this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Size = new System.Drawing.Size(259, 95);
-            this.displayLabel.TabIndex = 0;
-            this.displayLabel.Text = "0";
-            this.displayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.stackL3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.stackL3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.stackL3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stackL3.Font = new System.Drawing.Font("BankGothic Lt BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stackL3.ForeColor = System.Drawing.Color.Black;
+            this.stackL3.Location = new System.Drawing.Point(14, 13);
+            this.stackL3.Name = "stackL3";
+            this.stackL3.Size = new System.Drawing.Size(258, 35);
+            this.stackL3.TabIndex = 0;
+            this.stackL3.Text = "0";
+            this.stackL3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnBack
             // 
@@ -321,11 +323,39 @@
             this.btnPow.UseVisualStyleBackColor = true;
             this.btnPow.Click += new System.EventHandler(this.btnPct_Click);
             // 
+            // stackL2
+            // 
+            this.stackL2.BackColor = System.Drawing.SystemColors.Control;
+            this.stackL2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.stackL2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stackL2.Font = new System.Drawing.Font("BankGothic Lt BT", 18F);
+            this.stackL2.Location = new System.Drawing.Point(14, 48);
+            this.stackL2.Name = "stackL2";
+            this.stackL2.Size = new System.Drawing.Size(258, 35);
+            this.stackL2.TabIndex = 24;
+            this.stackL2.Text = "0";
+            this.stackL2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // stackL1
+            // 
+            this.stackL1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.stackL1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.stackL1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stackL1.Font = new System.Drawing.Font("BankGothic Lt BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stackL1.Location = new System.Drawing.Point(14, 83);
+            this.stackL1.Name = "stackL1";
+            this.stackL1.Size = new System.Drawing.Size(258, 35);
+            this.stackL1.TabIndex = 25;
+            this.stackL1.Text = "0";
+            this.stackL1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 375);
+            this.Controls.Add(this.stackL1);
+            this.Controls.Add(this.stackL2);
             this.Controls.Add(this.btnPow);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnEq);
@@ -349,7 +379,7 @@
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.displayLabel);
+            this.Controls.Add(this.stackL3);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -358,7 +388,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label displayLabel;
+        private System.Windows.Forms.Label stackL3;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.Button btnC;
@@ -382,6 +412,8 @@
         private System.Windows.Forms.Button btnEq;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnPow;
+        private System.Windows.Forms.Label stackL2;
+        private System.Windows.Forms.Label stackL1;
     }
 }
 
