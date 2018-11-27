@@ -12,7 +12,8 @@ namespace Kalkylatorn
 {
     public partial class Form1 : Form
     {
-        string displayTxt = "";
+        string displayTxt = ""; //Strängen alla siffror och karaktärer lagras i
+        List<double> stack = new List<double>();
 
         public Form1()
         {
