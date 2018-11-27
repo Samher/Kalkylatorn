@@ -49,7 +49,7 @@
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnGgr = new System.Windows.Forms.Button();
             this.btnDiv = new System.Windows.Forms.Button();
-            this.btnEq = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnPow = new System.Windows.Forms.Button();
             this.stackL2 = new System.Windows.Forms.Label();
@@ -291,16 +291,16 @@
             this.btnDiv.UseVisualStyleBackColor = true;
             this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
-            // btnEq
+            // btnEnter
             // 
-            this.btnEq.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEq.Location = new System.Drawing.Point(227, 272);
-            this.btnEq.Name = "btnEq";
-            this.btnEq.Size = new System.Drawing.Size(48, 91);
-            this.btnEq.TabIndex = 21;
-            this.btnEq.Text = "=";
-            this.btnEq.UseVisualStyleBackColor = true;
-            this.btnEq.Click += new System.EventHandler(this.btnEq_Click);
+            this.btnEnter.Font = new System.Drawing.Font("BankGothic Lt BT", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.Location = new System.Drawing.Point(227, 272);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(48, 91);
+            this.btnEnter.TabIndex = 21;
+            this.btnEnter.Text = "↲";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnDel
             // 
@@ -359,7 +359,7 @@
             this.Controls.Add(this.stackL2);
             this.Controls.Add(this.btnPow);
             this.Controls.Add(this.btnDel);
-            this.Controls.Add(this.btnEq);
+            this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnDiv);
             this.Controls.Add(this.btnGgr);
             this.Controls.Add(this.btnMinus);
@@ -410,7 +410,7 @@
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnGgr;
         private System.Windows.Forms.Button btnDiv;
-        private System.Windows.Forms.Button btnEq;
+        private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnPow;
         private System.Windows.Forms.Label stackL2;
