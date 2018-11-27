@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq.Expressions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,11 @@ namespace Kalkylatorn
     public partial class Form1 : Form
     {
         string displayTxt = "";
-
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (displayTxt.Length > 1 && displayTxt != "0")
@@ -40,19 +40,20 @@ namespace Kalkylatorn
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            displayTxt = "";
+            displayTxt = "0";
             displayLabel.Text = displayTxt;
 
         }
 
         private void btnPM_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "√";
+            displayLabel.Text = displayTxt;
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -99,42 +100,50 @@ namespace Kalkylatorn
 
         private void btn8_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "8";
+            displayLabel.Text = displayTxt;
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "9";
+            displayLabel.Text = displayTxt;
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "0";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-
+            displayTxt += ",";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "+";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "-";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnGgr_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "*";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "/";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnEq_Click(object sender, EventArgs e)
