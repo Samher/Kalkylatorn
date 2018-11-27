@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq.Expressions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +13,12 @@ namespace Kalkylatorn
 {
     public partial class Form1 : Form
     {
-        string displayTxt = ""; //Strängen alla siffror och karaktärer lagras i
-        List<double> stack = new List<double>();
-
+        string displayTxt = "";
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (displayTxt.Length > 1 && displayTxt != "0")
@@ -48,12 +47,13 @@ namespace Kalkylatorn
 
         private void btnPM_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "√";
+            displayLabel.Text = displayTxt;
         }
 
         private void numbtn_Click(object sender, EventArgs e)
@@ -73,27 +73,32 @@ namespace Kalkylatorn
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-
+            displayTxt += ",";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "+";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "-";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnGgr_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "*";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-
+            displayTxt += "/";
+            displayLabel.Text = displayTxt;
         }
 
         private void btnEq_Click(object sender, EventArgs e)
