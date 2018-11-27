@@ -24,7 +24,7 @@ namespace Kalkylatorn
             if (displayTxt.Length > 1 && displayTxt != "0")
             {
                 displayTxt = displayTxt.Remove(displayTxt.Length - 1, 1);
-                displayLabel.Text = displayTxt;
+                displayLabel.Text = displayTxt; 
             }
             else
             {
@@ -35,13 +35,13 @@ namespace Kalkylatorn
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            displayTxt = "0";
-            displayLabel.Text = displayTxt;
+            displayTxt = "";
+            displayLabel.Text = "0"; //Denna rad finns i (nästan) alla funktioner, och uppdaterar textrutan i kalkylatorn
 
         }
 
@@ -56,64 +56,19 @@ namespace Kalkylatorn
             displayLabel.Text = displayTxt;
         }
 
-        private void btn1_Click(object sender, EventArgs e)
+        private void numbtn_Click(object sender, EventArgs e)
         {
-            displayTxt += "1";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
-        {
-            displayTxt += "2";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            displayTxt += "3";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            displayTxt += "4";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            displayTxt += "5";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            displayTxt += "6";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            displayTxt += "7";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn8_Click(object sender, EventArgs e)
-        {
-            displayTxt += "8";
-            displayLabel.Text = displayTxt;
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
-        {
-            displayTxt += "9";
+            displayTxt += (sender as Button).Text;
             displayLabel.Text = displayTxt;
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            displayTxt += "0";
-            displayLabel.Text = displayTxt;
+            if (displayTxt != "") // If-satsen hindrar att man kan skriva ut nollor innan ens tal
+            {
+                displayTxt += "0";
+                displayLabel.Text = displayTxt;
+            }
         }
 
         private void btnDot_Click(object sender, EventArgs e)
