@@ -12,25 +12,38 @@ namespace Kalkylatorn
 {
     public partial class Form1 : Form
     {
-        string displayTxt = "";
         List<double> stack = new List<double>();
-        //double temp;
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void UpdateDisplay()
+        {
+            if (stack.Count > 0)
+            {
+                stackL1.Text = stack[0].ToString();
+            }
+            if (stack.Count > 1)
+            {
+                stackL2.Text = stack[1].ToString();
+            }
+            if (stack.Count > 2)
+            {
+                stackL3.Text = stack[2].ToString();
+            }
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (displayTxt.Length > 1 && displayTxt != "0")
+            if (stackL1.Text.Length > 1 && stackL1.Text != "0")
             {
-                displayTxt = displayTxt.Remove(displayTxt.Length - 1, 1);
-                stackL1.Text = displayTxt;
+                stackL1.Text = stackL1.Text.Remove(stackL1.Text.Length - 1, 1);
+                UpdateDisplay();
             }
             else
             {
-                displayTxt = "";
                 stackL1.Text = "0";
             }
         }
@@ -42,8 +55,8 @@ namespace Kalkylatorn
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            displayTxt = "";
-            stackL1.Text = "0"; //Denna rad finns i (nästan) alla funktioner, och uppdaterar textrutan i kalkylatorn
+            stack[0] = 0;
+            UpdateDisplay();
 
         }
 
@@ -54,55 +67,59 @@ namespace Kalkylatorn
 
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-            displayTxt = Math.Sqrt(stack[0]).ToString();
-            stackL1.Text = displayTxt;
+            stackL1.Text = Math.Sqrt(stack[0]).ToString();
+            stackL1.Text = stackL1.Text;
         }
 
         private void numbtn_Click(object sender, EventArgs e)
         {
-            displayTxt += (sender as Button).Text;
+            if (stackL1.Text == "0")
+            {
+                stackL1.Text = "";
+            }
+            stackL1.Text += (sender as Button).Text;
             if (stack.Count == 0)
             {
-                stack.Add(double.Parse(displayTxt));
+                stack.Add(double.Parse(stackL1.Text));
             }
             else
             {
-                stack[0] = double.Parse(displayTxt);
+                stack[0] = double.Parse(stackL1.Text);
             }
-            stackL1.Text = displayTxt;
+            UpdateDisplay();
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (displayTxt != "") // If-satsen hindrar att man kan fylla textrutan med bara nollor
+            if (stackL1.Text != "0") // If-satsen hindrar att man kan fylla textrutan med bara nollor
             {
-                displayTxt += "0";
-                stackL1.Text = displayTxt;
+                stackL1.Text += "0";
+                UpdateDisplay();
             }
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] + stack[0]).ToString();
-            stackL1.Text = displayTxt;
+            stackL1.Text = (stack[1] + stack[0]).ToString();
+            stackL1.Text = stackL1.Text;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] - stack[0]).ToString();
-            stackL1.Text = displayTxt;
+            stackL1.Text = (stack[1] - stack[0]).ToString();
+            stackL1.Text = stackL1.Text;
         }
 
         private void btnGgr_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] * stack[0]).ToString();
-            stackL1.Text = displayTxt;
+            stackL1.Text = (stack[1] * stack[0]).ToString();
+            stackL1.Text = stackL1.Text;
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] / stack[0]).ToString();
-            stackL1.Text = displayTxt;
+            stackL1.Text = (stack[1] / stack[0]).ToString();
+            stackL1.Text = stackL1.Text;
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -118,15 +135,7 @@ namespace Kalkylatorn
         private void btnEnter_Click(object sender, EventArgs e)
         {
             stack.Insert(0, 0); //Skapar en tom plats i början av listan där nästa tal kommer matas in
-            stackL3.Text = stackL2.Text;
-            stackL2.Text = stackL1.Text;
-            stackL1.Text = "0";
-            displayTxt = ""; //De senaste 4 raderna sköter uppskjutningen av texten i rutorna
-        }
-
-        private void stackL3_Click(object sender, EventArgs e)
-        {
-
+            UpdateDisplay();
         }
     }
 }

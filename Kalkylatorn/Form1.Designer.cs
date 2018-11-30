@@ -69,7 +69,6 @@
             this.stackL3.TabIndex = 0;
             this.stackL3.Text = "0";
             this.stackL3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stackL3.Click += new System.EventHandler(this.stackL3_Click);
             // 
             // btnBack
             // 
