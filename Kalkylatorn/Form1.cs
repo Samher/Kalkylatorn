@@ -25,32 +25,47 @@ namespace Kalkylatorn
             {
                 stackL1.Text = stack[0].ToString();
             }
+            else
+            {
+                stackL1.Text = "0";
+            }
             if (stack.Count > 1)
             {
                 stackL2.Text = stack[1].ToString();
+            }
+            else
+            {
+                stackL2.Text = "0";
             }
             if (stack.Count > 2)
             {
                 stackL3.Text = stack[2].ToString();
             }
+            else
+            {
+                stackL3.Text = "0";
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (stackL1.Text.Length > 1 && stackL1.Text != "0")
+            if (stackL1.Text.Length > 1)
             {
-                stackL1.Text = stackL1.Text.Remove(stackL1.Text.Length - 1, 1);
+                stack[0] -= stack[0] % 10;
+                stack[0] /= 10;
                 UpdateDisplay();
             }
             else
             {
-                stackL1.Text = "0";
+                stack[0] = 0;
+                UpdateDisplay();
             }
         }
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            
+            stack.Clear();
+            UpdateDisplay();
         }
 
         private void btnC_Click(object sender, EventArgs e)
@@ -124,12 +139,15 @@ namespace Kalkylatorn
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-
+            stack[0] = 1 / stack[0];
+            UpdateDisplay();
         }
 
-        private void btnPct_Click(object sender, EventArgs e)
+        private void btnPow_Click(object sender, EventArgs e)
         {
-
+            stack[0] = Math.Pow(stack[0], stack[1]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnEnter_Click(object sender, EventArgs e)

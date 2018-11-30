@@ -51,9 +51,9 @@
             this.btnDiv = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
-            this.btnPow = new System.Windows.Forms.Button();
             this.stackL2 = new System.Windows.Forms.Label();
             this.stackL1 = new System.Windows.Forms.Label();
+            this.btnPow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // stackL3
@@ -312,17 +312,6 @@
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // btnPow
-            // 
-            this.btnPow.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPow.Location = new System.Drawing.Point(227, 176);
-            this.btnPow.Name = "btnPow";
-            this.btnPow.Size = new System.Drawing.Size(48, 40);
-            this.btnPow.TabIndex = 23;
-            this.btnPow.Text = "^";
-            this.btnPow.UseVisualStyleBackColor = true;
-            this.btnPow.Click += new System.EventHandler(this.btnPct_Click);
-            // 
             // stackL2
             // 
             this.stackL2.BackColor = System.Drawing.SystemColors.Control;
@@ -348,6 +337,17 @@
             this.stackL1.TabIndex = 25;
             this.stackL1.Text = "0";
             this.stackL1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnPow
+            // 
+            this.btnPow.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPow.Location = new System.Drawing.Point(227, 176);
+            this.btnPow.Name = "btnPow";
+            this.btnPow.Size = new System.Drawing.Size(48, 40);
+            this.btnPow.TabIndex = 23;
+            this.btnPow.Text = "^";
+            this.btnPow.UseVisualStyleBackColor = true;
+            this.btnPow.Click += new System.EventHandler(this.btnPow_Click);
             // 
             // Form1
             // 
@@ -411,9 +411,9 @@
         private System.Windows.Forms.Button btnDiv;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnPow;
         private System.Windows.Forms.Label stackL2;
         private System.Windows.Forms.Label stackL1;
+        private System.Windows.Forms.Button btnPow;
     }
 }
 
