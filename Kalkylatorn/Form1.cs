@@ -23,7 +23,7 @@ namespace Kalkylatorn
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (displayTxt.Length > 1 && displayTxt != "0")
+            if (displayTxt.Length > 1 && displayTxt != "0")//Denna if-sats behåller alltid en nolla när man har tagi bort alla siffror
             {
                 displayTxt = displayTxt.Remove(displayTxt.Length - 1, 1);
                 stackL1.Text = displayTxt;
@@ -83,7 +83,7 @@ namespace Kalkylatorn
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] + stack[0]).ToString();
+            displayTxt = (stack[1] + stack[0]).ToString();// Alla rader som ser ut såhär med olika operatorer utför den aktuella beräkningen
             stackL1.Text = displayTxt;
         }
 
