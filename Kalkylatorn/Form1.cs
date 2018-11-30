@@ -115,26 +115,30 @@ namespace Kalkylatorn
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            stackL1.Text = (stack[1] + stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            stack[0] = (stack[1] + stack[0]);// Alla rader som ser ut såhär med olika operatorer utför den aktuella beräkningen
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            stackL1.Text = (stack[1] - stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            stack[0] = (stack[1] - stack[0]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnGgr_Click(object sender, EventArgs e)
         {
-            stackL1.Text = (stack[1] * stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            stack[0] = (stack[1] * stack[0]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            stackL1.Text = (stack[1] / stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            stack[0] = (stack[1] / stack[0]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
