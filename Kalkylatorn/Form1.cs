@@ -25,13 +25,25 @@ namespace Kalkylatorn
             {
                 stackL1.Text = stack[0].ToString();
             }
+            else
+            {
+                stackL1.Text = "0";
+            }
             if (stack.Count > 1)
             {
                 stackL2.Text = stack[1].ToString();
             }
+            else
+            {
+                stackL2.Text = "0";
+            }
             if (stack.Count > 2)
             {
                 stackL3.Text = stack[2].ToString();
+            }
+            else
+            {
+                stackL3.Text = "0";
             }
         }
 
@@ -100,34 +112,30 @@ namespace Kalkylatorn
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] + stack[0]).ToString();// Alla rader som ser ut såhär med olika operatorer utför den aktuella beräkningen
-            stack[0] = double.Parse(stackL1.Text);
-            stack.Remove(1);
-            stackL1.Text = (stack[1] + stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            stack[0] = (stack[1] + stack[0]);// Alla rader som ser ut såhär med olika operatorer utför den aktuella beräkningen
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] - stack[0]).ToString();
-            stack[0] = double.Parse(stackL1.Text);
-            stack.Remove(1);
+            stack[0] = (stack[1] - stack[0]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnGgr_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] * stack[0]).ToString();
-            stack[0] = double.Parse(stackL1.Text);
-            stack.Remove(1);
+            stack[0] = (stack[1] * stack[0]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            displayTxt = (stack[1] / stack[0]).ToString();
-            stack[0] = double.Parse(stackL1.Text);
-            stack.Remove(1);
-            stackL1.Text = (stack[1] / stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            stack[0] = (stack[1] / stack[0]);
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
