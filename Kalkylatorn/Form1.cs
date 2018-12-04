@@ -51,8 +51,7 @@ namespace Kalkylatorn
         {
             if (stackL1.Text.Length > 1)
             {
-                stack[0] -= stack[0] % 10;
-                stack[0] /= 10;
+                stack[0] = (stack[0] - stack[0] % 10) / 10;
                 UpdateDisplay();
             }
             else
