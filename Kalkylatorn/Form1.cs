@@ -12,14 +12,14 @@ namespace Kalkylatorn
 {
     public partial class Form1 : Form
     {
-        List<double> stack = new List<double>();
+        List<double> stack = new List<double>(); //Detta är stacken som RPN-räknare bygger på
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void UpdateDisplay()
+        private void UpdateDisplay() //Denna funktion körs i väldigt många andra funktioner, och synkroniserar texten i räknaren med stackens värden
         {
             if (stack.Count > 0)
             {
@@ -27,7 +27,7 @@ namespace Kalkylatorn
             }
             else
             {
-                stackL1.Text = "0";
+                stackL1.Text = "0"; //Varje if i denna funktion har denna rad i en else. Om stackens plats är tom skriver räknaren "0" istället för att krascha
             }
             if (stack.Count > 1)
             {
@@ -76,7 +76,8 @@ namespace Kalkylatorn
 
         private void btnPM_Click(object sender, EventArgs e)
         {
-
+            stack[0] *= -1;
+            UpdateDisplay();
         }
 
         private void btnSQRT_Click(object sender, EventArgs e)
