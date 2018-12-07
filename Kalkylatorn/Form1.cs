@@ -47,6 +47,7 @@ namespace Kalkylatorn
             }
         }
 
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (stackL1.Text.Length > 1)
@@ -87,6 +88,10 @@ namespace Kalkylatorn
 
         private void numbtn_Click(object sender, EventArgs e)
         {
+            if (stackL1.Text == "Error")
+            {
+                stackL1.Text = "0";
+            }
             if (stackL1.Text == "0")
             {
                 stackL1.Text = "";
@@ -111,33 +116,37 @@ namespace Kalkylatorn
                 UpdateDisplay();
             }
         }
-
-        private void btnPlus_Click(object sender, EventArgs e)
+        private void Operator_Click(object sender, EventArgs e)
         {
-            stack[0] = (stack[1] + stack[0]);// Alla rader som ser ut såhär med olika operatorer utför den aktuella beräkningen
-            stack.RemoveAt(1);
-            UpdateDisplay();
-        }
-
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-            stack[0] = (stack[1] - stack[0]);
-            stack.RemoveAt(1);
-            UpdateDisplay();
-        }
-
-        private void btnGgr_Click(object sender, EventArgs e)
-        {
-            stack[0] = (stack[1] * stack[0]);
-            stack.RemoveAt(1);
-            UpdateDisplay();
-        }
-
-        private void btnDiv_Click(object sender, EventArgs e)
-        {
-            stack[0] = (stack[1] / stack[0]);
-            stack.RemoveAt(1);
-            UpdateDisplay();
+            if (sender as Button == btnPlus && stack.Count > 1)
+            {
+                stack[0] += stack[1];
+            }
+            else if (sender as Button == btnDiv && stack.Count > 1 && stack[1] != 0)
+            {
+                stack[0] /= stack[1];
+            }
+            else if (sender as Button == btnGgr && stack.Count > 1)
+            {
+                stack[0] *= stack[1];
+            }
+            else if (sender as Button == btnMinus && stack.Count > 1)
+            {
+                stack[0] -= stack[1];
+            }
+            else if (sender as Button == btnPow && stack.Count > 1)
+            {
+                stack[0] = Math.Pow(stack[0], stack[1]);
+            }
+            else
+            {
+                stackL1.Text = "Error";
+            }
+            if (stack.Count > 1)
+            {
+                stack.RemoveAt(1);
+                UpdateDisplay();
+            }
         }
 
         private void btnDel_Click(object sender, EventArgs e)

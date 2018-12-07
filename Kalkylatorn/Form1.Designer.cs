@@ -255,7 +255,7 @@
             this.btnPlus.TabIndex = 17;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            this.btnPlus.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnMinus
             // 
@@ -266,7 +266,7 @@
             this.btnMinus.TabIndex = 18;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            this.btnMinus.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnGgr
             // 
@@ -277,7 +277,7 @@
             this.btnGgr.TabIndex = 19;
             this.btnGgr.Text = "*";
             this.btnGgr.UseVisualStyleBackColor = true;
-            this.btnGgr.Click += new System.EventHandler(this.btnGgr_Click);
+            this.btnGgr.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnDiv
             // 
@@ -288,7 +288,7 @@
             this.btnDiv.TabIndex = 20;
             this.btnDiv.Text = "÷";
             this.btnDiv.UseVisualStyleBackColor = true;
-            this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
+            this.btnDiv.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnEnter
             // 
@@ -347,7 +347,7 @@
             this.btnPow.TabIndex = 23;
             this.btnPow.Text = "^";
             this.btnPow.UseVisualStyleBackColor = true;
-            this.btnPow.Click += new System.EventHandler(this.btnPow_Click);
+            this.btnPow.Click += new System.EventHandler(this.Operator_Click);
             // 
             // Form1
             // 
