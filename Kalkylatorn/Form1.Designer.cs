@@ -244,7 +244,7 @@
             this.btnDot.TabIndex = 16;
             this.btnDot.Text = ",";
             this.btnDot.UseVisualStyleBackColor = true;
-            this.btnDot.Click += new System.EventHandler(this.numbtn_Click);
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btnPlus
             // 
