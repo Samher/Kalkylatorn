@@ -18,7 +18,8 @@ namespace Kalkylatorn
         {
             InitializeComponent();
         }
-
+        /*UpdateDisplay funktionen ser till att rätt tal står på rätt plats efter varje knapptryck
+        och skriver nollor där det inte finns något nummer*/
         private void UpdateDisplay()
         {
             if (stack.Count > 0)
@@ -47,7 +48,8 @@ namespace Kalkylatorn
             }
         }
 
-
+        /*Backspace funktionen nedan har en if-sats som kollar om texten i rutan längst ned har fler än
+        * 1 tecken och tar då bort det sista tecknet. Annars byter den tecknet mot en nolla*/
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (stackL1.Text.Length > 1)
@@ -61,31 +63,30 @@ namespace Kalkylatorn
                 UpdateDisplay();
             }
         }
-
+        //tar bort alla nummer i listan
         private void btnCE_Click(object sender, EventArgs e)
         {
             stack.Clear();
             UpdateDisplay();
         }
-
+        //byter numret längst ned till 0
         private void btnC_Click(object sender, EventArgs e)
         {
             stack[0] = 0;
             UpdateDisplay();
-
         }
-
+        //multiplicerar talet längste ned med -1 för att ändra tecknet framför
         private void btnPM_Click(object sender, EventArgs e)
         {
             
         }
-
+        //tar kvadratroten ur talet längst ned
         private void btnSQRT_Click(object sender, EventArgs e)
         {
             stackL1.Text = Math.Sqrt(stack[0]).ToString();
             stackL1.Text = stackL1.Text;
         }
-
+        /*Denna funktion nyttjas av alla nummerknappar och skriver det nummer som syns på knappen man trycker på*/
         private void numbtn_Click(object sender, EventArgs e)
         {
             if (stackL1.Text == "Error")
