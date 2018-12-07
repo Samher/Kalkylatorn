@@ -78,13 +78,21 @@ namespace Kalkylatorn
         //multiplicerar talet längste ned med -1 för att ändra tecknet framför
         private void btnPM_Click(object sender, EventArgs e)
         {
-            
+            stack[0] *= -1;
+            UpdateDisplay();
         }
         //tar kvadratroten ur talet längst ned
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-            stackL1.Text = Math.Sqrt(stack[0]).ToString();
-            stackL1.Text = stackL1.Text;
+            if (stack[0] > 0)
+            {
+                stack[0] = Math.Sqrt(stack[0]);
+                UpdateDisplay();
+            }
+            else
+            {
+                stackL1.Text = "Error";
+            }
         }
         /*Denna funktion nyttjas av alla nummerknappar och skriver det nummer som syns på knappen man trycker på*/
         private void numbtn_Click(object sender, EventArgs e)
@@ -111,21 +119,38 @@ namespace Kalkylatorn
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (stackL1.Text != "0") // If-satsen hindrar att man kan fylla textrutan med bara nollor
+            if (stackL1.Text != "0" || stackL1.Text[stackL1.Text.Length - 1] == ',') // If-satsen hindrar att man kan fylla textrutan med bara nollor
             {
                 stackL1.Text += "0";
-                UpdateDisplay();
             }
         }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            if (!stackL1.Text.Contains(','))
+            {
+                stackL1.Text += ",";
+            }
+        }
+
         private void Operator_Click(object sender, EventArgs e)
         {
+            if (stack.Count == 0)
+            {
+                return;
+            }
+            if (stack.Count == 1)
+            {
+                stack.Add(0);
+            }
+
             if (sender as Button == btnPlus && stack.Count > 1)
             {
                 stack[0] += stack[1];
             }
-            else if (sender as Button == btnDiv && stack.Count > 1 && stack[1] != 0)
+            else if (sender as Button == btnDiv && stack.Count > 1 && stack[0] != 0)
             {
-                stack[0] /= stack[1];
+                stack[0] = stack[1] / stack[0];
             }
             else if (sender as Button == btnGgr && stack.Count > 1)
             {
@@ -133,21 +158,21 @@ namespace Kalkylatorn
             }
             else if (sender as Button == btnMinus && stack.Count > 1)
             {
-                stack[0] -= stack[1];
+                stack[0] = stack[1] - stack[0];
             }
             else if (sender as Button == btnPow && stack.Count > 1)
             {
-                stack[0] = Math.Pow(stack[0], stack[1]);
+                stack[0] = Math.Pow(stack[1], stack[0]);
             }
             else
             {
                 stackL1.Text = "Error";
-            }
-            if (stack.Count > 1)
-            {
                 stack.RemoveAt(1);
-                UpdateDisplay();
+                return;
             }
+
+            stack.RemoveAt(1);
+            UpdateDisplay();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
