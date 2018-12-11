@@ -197,15 +197,25 @@ namespace Kalkylatorn
 
         private void btnPOP_Click(object sender, EventArgs e)
         {
-            stack.RemoveAt(0);
-            UpdateDisplay();
+            if (stack.Count > 0)
+            {
+                stack.RemoveAt(0);
+                UpdateDisplay();
+            }
         }
 
         private void btnSWAP_Click(object sender, EventArgs e)
         {
-            double temp = stack[0];
-            stack[0] = stack[1];
-            stack[1] = temp;
+            if (stack.Count == 1)
+            {
+                stack.Insert(0, 0);
+            }
+            else if (stack.Count > 1)
+            {
+                double temp = stack[0];
+                stack[0] = stack[1];
+                stack[1] = temp;
+            }
             UpdateDisplay();
         }
     }
