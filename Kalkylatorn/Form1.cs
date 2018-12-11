@@ -121,6 +121,7 @@ namespace Kalkylatorn
             if (stackL1.Text != "0" || stackL1.Text[stackL1.Text.Length - 1] == ',') // If-satsen hindrar att man kan fylla textrutan med bara nollor
             {
                 stackL1.Text += "0";
+                stack[0] = double.Parse(stackL1.Text);
             }
         }
 
