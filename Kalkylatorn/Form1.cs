@@ -96,7 +96,7 @@ namespace Kalkylatorn
 
         private void numbtn_Click(object sender, EventArgs e)
         {
-            if (stackL1.Text == "Error")
+            if (stackL1.Text == "Error" || stackL1.Text == "∞")
             {
                 stackL1.Text = "0";
             }
