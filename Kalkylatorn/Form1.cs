@@ -66,13 +66,13 @@ namespace Kalkylatorn
             }
         }
         //tar bort alla nummer i listan
-        private void btnCE_Click(object sender, EventArgs e)
+        private void btnC_Click(object sender, EventArgs e)
         {
             stack.Clear();
             UpdateDisplay();
         }
         //byter numret längst ned till 0
-        private void btnC_Click(object sender, EventArgs e)
+        private void btnCE_Click(object sender, EventArgs e)
         {
             if (stack.Count > 0)
             {
