@@ -193,5 +193,19 @@ namespace Kalkylatorn
             stack.Insert(0, 0); //Skapar en tom plats i början av listan där nästa tal kommer matas in
             UpdateDisplay();
         }
+
+        private void btnPOP_Click(object sender, EventArgs e)
+        {
+            stack.RemoveAt(0);
+            UpdateDisplay();
+        }
+
+        private void btnSWAP_Click(object sender, EventArgs e)
+        {
+            double temp = stack[0];
+            stack[0] = stack[1];
+            stack[1] = temp;
+            UpdateDisplay();
+        }
     }
 }
