@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.stackL3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
@@ -71,7 +72,6 @@
             this.stackL3.TabIndex = 0;
             this.stackL3.Text = "0";
             this.stackL3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stackL3.UseWaitCursor = true;
             // 
             // btnBack
             // 
@@ -82,7 +82,6 @@
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "←";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.UseWaitCursor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnCE
@@ -94,7 +93,6 @@
             this.btnCE.TabIndex = 2;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
-            this.btnCE.UseWaitCursor = true;
             this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btnC
@@ -106,7 +104,6 @@
             this.btnC.TabIndex = 3;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
-            this.btnC.UseWaitCursor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnPM
@@ -118,7 +115,6 @@
             this.btnPM.TabIndex = 4;
             this.btnPM.Text = "±";
             this.btnPM.UseVisualStyleBackColor = true;
-            this.btnPM.UseWaitCursor = true;
             this.btnPM.Click += new System.EventHandler(this.btnPM_Click);
             // 
             // btnSQRT
@@ -130,7 +126,6 @@
             this.btnSQRT.TabIndex = 5;
             this.btnSQRT.Text = "√";
             this.btnSQRT.UseVisualStyleBackColor = true;
-            this.btnSQRT.UseWaitCursor = true;
             this.btnSQRT.Click += new System.EventHandler(this.btnSQRT_Click);
             // 
             // btn1
@@ -142,7 +137,6 @@
             this.btn1.TabIndex = 6;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.UseWaitCursor = true;
             this.btn1.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn2
@@ -154,7 +148,6 @@
             this.btn2.TabIndex = 7;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.UseWaitCursor = true;
             this.btn2.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn3
@@ -166,7 +159,6 @@
             this.btn3.TabIndex = 8;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.UseWaitCursor = true;
             this.btn3.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn4
@@ -178,7 +170,6 @@
             this.btn4.TabIndex = 9;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.UseWaitCursor = true;
             this.btn4.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn5
@@ -190,7 +181,6 @@
             this.btn5.TabIndex = 10;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.UseWaitCursor = true;
             this.btn5.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn6
@@ -202,7 +192,6 @@
             this.btn6.TabIndex = 11;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.UseWaitCursor = true;
             this.btn6.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn7
@@ -214,7 +203,6 @@
             this.btn7.TabIndex = 12;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.UseWaitCursor = true;
             this.btn7.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn8
@@ -226,7 +214,6 @@
             this.btn8.TabIndex = 13;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.UseWaitCursor = true;
             this.btn8.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn9
@@ -238,7 +225,6 @@
             this.btn9.TabIndex = 14;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.UseWaitCursor = true;
             this.btn9.Click += new System.EventHandler(this.numbtn_Click);
             // 
             // btn0
@@ -250,7 +236,6 @@
             this.btn0.TabIndex = 15;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.UseWaitCursor = true;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btnDot
@@ -262,7 +247,6 @@
             this.btnDot.TabIndex = 16;
             this.btnDot.Text = ",";
             this.btnDot.UseVisualStyleBackColor = true;
-            this.btnDot.UseWaitCursor = true;
             this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btnPlus
@@ -274,7 +258,6 @@
             this.btnPlus.TabIndex = 17;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.UseWaitCursor = true;
             this.btnPlus.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnMinus
@@ -286,7 +269,6 @@
             this.btnMinus.TabIndex = 18;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.UseWaitCursor = true;
             this.btnMinus.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnGgr
@@ -298,7 +280,6 @@
             this.btnGgr.TabIndex = 19;
             this.btnGgr.Text = "*";
             this.btnGgr.UseVisualStyleBackColor = true;
-            this.btnGgr.UseWaitCursor = true;
             this.btnGgr.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnDiv
@@ -310,7 +291,6 @@
             this.btnDiv.TabIndex = 20;
             this.btnDiv.Text = "÷";
             this.btnDiv.UseVisualStyleBackColor = true;
-            this.btnDiv.UseWaitCursor = true;
             this.btnDiv.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnEnter
@@ -322,7 +302,6 @@
             this.btnEnter.TabIndex = 21;
             this.btnEnter.Text = "↲";
             this.btnEnter.UseVisualStyleBackColor = true;
-            this.btnEnter.UseWaitCursor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnDel
@@ -334,7 +313,6 @@
             this.btnDel.TabIndex = 22;
             this.btnDel.Text = "1/x";
             this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.UseWaitCursor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // stackL2
@@ -349,7 +327,6 @@
             this.stackL2.TabIndex = 24;
             this.stackL2.Text = "0";
             this.stackL2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stackL2.UseWaitCursor = true;
             // 
             // stackL1
             // 
@@ -363,7 +340,6 @@
             this.stackL1.TabIndex = 25;
             this.stackL1.Text = "0";
             this.stackL1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stackL1.UseWaitCursor = true;
             // 
             // btnPow
             // 
@@ -374,7 +350,6 @@
             this.btnPow.TabIndex = 23;
             this.btnPow.Text = "^";
             this.btnPow.UseVisualStyleBackColor = true;
-            this.btnPow.UseWaitCursor = true;
             this.btnPow.Click += new System.EventHandler(this.Operator_Click);
             // 
             // btnPOP
@@ -386,7 +361,6 @@
             this.btnPOP.TabIndex = 26;
             this.btnPOP.Text = "POP";
             this.btnPOP.UseVisualStyleBackColor = true;
-            this.btnPOP.UseWaitCursor = true;
             this.btnPOP.Click += new System.EventHandler(this.btnPOP_Click);
             // 
             // btnSWAP
@@ -398,7 +372,6 @@
             this.btnSWAP.TabIndex = 27;
             this.btnSWAP.Text = "SWAP";
             this.btnSWAP.UseVisualStyleBackColor = true;
-            this.btnSWAP.UseWaitCursor = true;
             this.btnSWAP.Click += new System.EventHandler(this.btnSWAP_Click);
             // 
             // Form1
@@ -434,6 +407,8 @@
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.stackL3);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "RPN-Kalkylator";
             this.ResumeLayout(false);

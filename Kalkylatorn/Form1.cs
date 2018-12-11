@@ -12,6 +12,8 @@ namespace Kalkylatorn
 {
     public partial class Form1 : Form
     {
+        /*Denna lista inehåller alla nummer i stacken. Numret längst ned är på plats 0, i mitten på plats 1 och 
+        högst upp på plats 2*/
         List<double> stack = new List<double>();
 
         public Form1()
@@ -81,7 +83,7 @@ namespace Kalkylatorn
             stack[0] *= -1;
             UpdateDisplay();
         }
-        //tar kvadratroten ur talet längst ned
+        //tar kvadratroten ur talet längst ned d.v.s på plats noll i stack
         private void btnSQRT_Click(object sender, EventArgs e)
         {
             if (stack[0] > 0)
@@ -119,13 +121,14 @@ namespace Kalkylatorn
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (stackL1.Text != "0" || stackL1.Text[stackL1.Text.Length - 1] == ',') // If-satsen hindrar att man kan fylla textrutan med bara nollor
+            // If-satsen hindrar att man kan fylla textrutan med bara nollor
+            if (stackL1.Text != "0" || stackL1.Text[stackL1.Text.Length - 1] == ',')
             {
                 stackL1.Text += "0";
                 stack[0] = double.Parse(stackL1.Text);
             }
         }
-
+        //Denna funktion skriver ett decimaltecken när den aktiveras förutsatt att det inte redan finns ett.
         private void btnDot_Click(object sender, EventArgs e)
         {
             if (!stackL1.Text.Contains(','))
@@ -133,7 +136,10 @@ namespace Kalkylatorn
                 stackL1.Text += ",";
             }
         }
-
+        /*Denna funktion tar hand om alla operatorer som tar 2 argument. Den tittar först om 
+        det finns 0 argument och avslutar då funktionen. Sedan tittar den om det bara finns ett argument och lägger 
+        då till en nolla som ett andra argument. Sedan utför den kalkylationen som begärs med ett specialfall för division 
+        där nämnaren är 0. Om inga av kalkylationerna kan ytföras skriver den "Error"*/
         private void Operator_Click(object sender, EventArgs e)
         {
             if (stack.Count == 0)
@@ -144,7 +150,6 @@ namespace Kalkylatorn
             {
                 stack.Add(0);
             }
-
             if (sender as Button == btnPlus && stack.Count > 1)
             {
                 stack[0] += stack[1];
@@ -171,30 +176,22 @@ namespace Kalkylatorn
                 stack.RemoveAt(1);
                 return;
             }
-
             stack.RemoveAt(1);
             UpdateDisplay();
         }
-
+        //dividerar 1 med talet längst ned
         private void btnDel_Click(object sender, EventArgs e)
         {
             stack[0] = 1 / stack[0];
             UpdateDisplay();
         }
-
-        private void btnPow_Click(object sender, EventArgs e)
-        {
-            stack[0] = Math.Pow(stack[0], stack[1]);
-            stack.RemoveAt(1);
-            UpdateDisplay();
-        }
-
+        
         private void btnEnter_Click(object sender, EventArgs e)
         {
             stack.Insert(0, 0); //Skapar en tom plats i början av listan där nästa tal kommer matas in
             UpdateDisplay();
         }
-
+        //Plockar bort talet från plats 0 vilket skjuter ned alla tal längre upp
         private void btnPOP_Click(object sender, EventArgs e)
         {
             if (stack.Count > 0)
@@ -203,7 +200,7 @@ namespace Kalkylatorn
                 UpdateDisplay();
             }
         }
-
+        //Byter plats på talet på plats 1 och plats 0
         private void btnSWAP_Click(object sender, EventArgs e)
         {
             if (stack.Count == 1)
