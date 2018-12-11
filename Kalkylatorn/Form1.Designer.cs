@@ -54,6 +54,8 @@
             this.stackL2 = new System.Windows.Forms.Label();
             this.stackL1 = new System.Windows.Forms.Label();
             this.btnPow = new System.Windows.Forms.Button();
+            this.btnPOP = new System.Windows.Forms.Button();
+            this.btnSWAP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // stackL3
@@ -73,7 +75,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(13, 126);
+            this.btnBack.Location = new System.Drawing.Point(10, 173);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(48, 42);
             this.btnBack.TabIndex = 1;
@@ -84,7 +86,7 @@
             // btnCE
             // 
             this.btnCE.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCE.Location = new System.Drawing.Point(66, 126);
+            this.btnCE.Location = new System.Drawing.Point(63, 173);
             this.btnCE.Name = "btnCE";
             this.btnCE.Size = new System.Drawing.Size(47, 42);
             this.btnCE.TabIndex = 2;
@@ -95,7 +97,7 @@
             // btnC
             // 
             this.btnC.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(119, 126);
+            this.btnC.Location = new System.Drawing.Point(116, 173);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(48, 42);
             this.btnC.TabIndex = 3;
@@ -106,7 +108,7 @@
             // btnPM
             // 
             this.btnPM.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPM.Location = new System.Drawing.Point(173, 126);
+            this.btnPM.Location = new System.Drawing.Point(170, 173);
             this.btnPM.Name = "btnPM";
             this.btnPM.Size = new System.Drawing.Size(48, 42);
             this.btnPM.TabIndex = 4;
@@ -117,7 +119,7 @@
             // btnSQRT
             // 
             this.btnSQRT.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSQRT.Location = new System.Drawing.Point(227, 126);
+            this.btnSQRT.Location = new System.Drawing.Point(224, 173);
             this.btnSQRT.Name = "btnSQRT";
             this.btnSQRT.Size = new System.Drawing.Size(48, 42);
             this.btnSQRT.TabIndex = 5;
@@ -128,7 +130,7 @@
             // btn1
             // 
             this.btn1.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(12, 272);
+            this.btn1.Location = new System.Drawing.Point(9, 319);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(48, 42);
             this.btn1.TabIndex = 6;
@@ -139,7 +141,7 @@
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(66, 272);
+            this.btn2.Location = new System.Drawing.Point(63, 319);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(48, 42);
             this.btn2.TabIndex = 7;
@@ -150,7 +152,7 @@
             // btn3
             // 
             this.btn3.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(120, 272);
+            this.btn3.Location = new System.Drawing.Point(117, 319);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(47, 42);
             this.btn3.TabIndex = 8;
@@ -161,7 +163,7 @@
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(12, 224);
+            this.btn4.Location = new System.Drawing.Point(9, 271);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(48, 42);
             this.btn4.TabIndex = 9;
@@ -172,7 +174,7 @@
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(66, 224);
+            this.btn5.Location = new System.Drawing.Point(63, 271);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(47, 42);
             this.btn5.TabIndex = 10;
@@ -183,7 +185,7 @@
             // btn6
             // 
             this.btn6.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(119, 224);
+            this.btn6.Location = new System.Drawing.Point(116, 271);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(48, 42);
             this.btn6.TabIndex = 11;
@@ -194,7 +196,7 @@
             // btn7
             // 
             this.btn7.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(13, 176);
+            this.btn7.Location = new System.Drawing.Point(10, 223);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(48, 42);
             this.btn7.TabIndex = 12;
@@ -205,7 +207,7 @@
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(66, 176);
+            this.btn8.Location = new System.Drawing.Point(63, 223);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(47, 42);
             this.btn8.TabIndex = 13;
@@ -216,7 +218,7 @@
             // btn9
             // 
             this.btn9.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(119, 176);
+            this.btn9.Location = new System.Drawing.Point(116, 223);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(48, 42);
             this.btn9.TabIndex = 14;
@@ -227,7 +229,7 @@
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(12, 320);
+            this.btn0.Location = new System.Drawing.Point(9, 367);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(101, 43);
             this.btn0.TabIndex = 15;
@@ -238,7 +240,7 @@
             // btnDot
             // 
             this.btnDot.Font = new System.Drawing.Font("BankGothic Lt BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDot.Location = new System.Drawing.Point(119, 320);
+            this.btnDot.Location = new System.Drawing.Point(116, 367);
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(48, 43);
             this.btnDot.TabIndex = 16;
@@ -249,7 +251,7 @@
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.Location = new System.Drawing.Point(173, 320);
+            this.btnPlus.Location = new System.Drawing.Point(170, 367);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(48, 43);
             this.btnPlus.TabIndex = 17;
@@ -260,7 +262,7 @@
             // btnMinus
             // 
             this.btnMinus.Font = new System.Drawing.Font("BankGothic Lt BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.Location = new System.Drawing.Point(173, 272);
+            this.btnMinus.Location = new System.Drawing.Point(170, 319);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(48, 42);
             this.btnMinus.TabIndex = 18;
@@ -271,7 +273,7 @@
             // btnGgr
             // 
             this.btnGgr.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGgr.Location = new System.Drawing.Point(173, 224);
+            this.btnGgr.Location = new System.Drawing.Point(170, 271);
             this.btnGgr.Name = "btnGgr";
             this.btnGgr.Size = new System.Drawing.Size(48, 42);
             this.btnGgr.TabIndex = 19;
@@ -282,7 +284,7 @@
             // btnDiv
             // 
             this.btnDiv.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiv.Location = new System.Drawing.Point(173, 174);
+            this.btnDiv.Location = new System.Drawing.Point(170, 221);
             this.btnDiv.Name = "btnDiv";
             this.btnDiv.Size = new System.Drawing.Size(48, 42);
             this.btnDiv.TabIndex = 20;
@@ -293,7 +295,7 @@
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("BankGothic Lt BT", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(227, 272);
+            this.btnEnter.Location = new System.Drawing.Point(224, 319);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(48, 91);
             this.btnEnter.TabIndex = 21;
@@ -304,7 +306,7 @@
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("BankGothic Lt BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(227, 224);
+            this.btnDel.Location = new System.Drawing.Point(224, 271);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(48, 42);
             this.btnDel.TabIndex = 22;
@@ -341,7 +343,7 @@
             // btnPow
             // 
             this.btnPow.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPow.Location = new System.Drawing.Point(227, 176);
+            this.btnPow.Location = new System.Drawing.Point(224, 223);
             this.btnPow.Name = "btnPow";
             this.btnPow.Size = new System.Drawing.Size(48, 40);
             this.btnPow.TabIndex = 23;
@@ -349,11 +351,35 @@
             this.btnPow.UseVisualStyleBackColor = true;
             this.btnPow.Click += new System.EventHandler(this.Operator_Click);
             // 
+            // btnPOP
+            // 
+            this.btnPOP.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPOP.Location = new System.Drawing.Point(9, 126);
+            this.btnPOP.Name = "btnPOP";
+            this.btnPOP.Size = new System.Drawing.Size(128, 41);
+            this.btnPOP.TabIndex = 26;
+            this.btnPOP.Text = "POP";
+            this.btnPOP.UseVisualStyleBackColor = true;
+            this.btnPOP.Click += new System.EventHandler(this.btnPOP_Click);
+            // 
+            // btnSWAP
+            // 
+            this.btnSWAP.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSWAP.Location = new System.Drawing.Point(144, 126);
+            this.btnSWAP.Name = "btnSWAP";
+            this.btnSWAP.Size = new System.Drawing.Size(128, 41);
+            this.btnSWAP.TabIndex = 27;
+            this.btnSWAP.Text = "SWAP";
+            this.btnSWAP.UseVisualStyleBackColor = true;
+            this.btnSWAP.Click += new System.EventHandler(this.btnSWAP_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 375);
+            this.ClientSize = new System.Drawing.Size(284, 420);
+            this.Controls.Add(this.btnSWAP);
+            this.Controls.Add(this.btnPOP);
             this.Controls.Add(this.stackL1);
             this.Controls.Add(this.stackL2);
             this.Controls.Add(this.btnPow);
@@ -414,6 +440,8 @@
         private System.Windows.Forms.Label stackL2;
         private System.Windows.Forms.Label stackL1;
         private System.Windows.Forms.Button btnPow;
+        private System.Windows.Forms.Button btnPOP;
+        private System.Windows.Forms.Button btnSWAP;
     }
 }
 
