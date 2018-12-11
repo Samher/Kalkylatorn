@@ -410,7 +410,7 @@
             this.Controls.Add(this.stackL3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "RPN-Kalkylator";
             this.ResumeLayout(false);
 
         }
