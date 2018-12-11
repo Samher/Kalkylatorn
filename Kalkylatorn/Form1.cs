@@ -55,7 +55,7 @@ namespace Kalkylatorn
                 stack[0] = (stack[0] - stack[0] % 10) / 10;
                 UpdateDisplay();
             }
-            else
+            else if (stack.Count == 1)
             {
                 stack[0] = 0;
                 UpdateDisplay();
@@ -70,19 +70,28 @@ namespace Kalkylatorn
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            stack[0] = 0;
+            if (stack.Count > 0)
+            {
+                stack[0] = 0;
+            }
             UpdateDisplay();
-
         }
 
         private void btnPM_Click(object sender, EventArgs e)
         {
-            stack[0] *= -1;
+            if (stack.Count > 0)
+            {
+                stack[0] *= -1;
+            }
             UpdateDisplay();
         }
 
         private void btnSQRT_Click(object sender, EventArgs e)
         {
+            if (stack.Count == 0)
+            {
+                return;
+            }
             if (stack[0] > 0)
             {
                 stack[0] = Math.Sqrt(stack[0]);
@@ -96,6 +105,10 @@ namespace Kalkylatorn
 
         private void numbtn_Click(object sender, EventArgs e)
         {
+            if (stackL1.Text.Length > 12)
+            {
+                return; //Detta stoppar att det skrivna talet blir för stort för datatypen "double"
+            }
             if (stackL1.Text == "Error" || stackL1.Text == "∞")
             {
                 stackL1.Text = "0";
@@ -118,8 +131,16 @@ namespace Kalkylatorn
 
         private void btn0_Click(object sender, EventArgs e)
         {
+            if (stackL1.Text.Length > 12)
+            {
+                return; 
+            }
             if (stackL1.Text != "0" || stackL1.Text[stackL1.Text.Length - 1] == ',') // If-satsen hindrar att man kan fylla textrutan med bara nollor
             {
+                if (stack.Count == 0)
+                {
+                    stack.Add(0);
+                }
                 stackL1.Text += "0";
                 stack[0] = double.Parse(stackL1.Text);
             }
@@ -177,8 +198,11 @@ namespace Kalkylatorn
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            stack[0] = 1 / stack[0];
-            UpdateDisplay();
+            if (stack.Count > 0)
+            {
+                stack[0] = 1 / stack[0];
+                UpdateDisplay();
+            }
         }
 
         private void btnPow_Click(object sender, EventArgs e)

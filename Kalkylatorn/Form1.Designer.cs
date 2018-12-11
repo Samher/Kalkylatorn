@@ -334,6 +334,7 @@
             this.stackL1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.stackL1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stackL1.Font = new System.Drawing.Font("BankGothic Lt BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stackL1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.stackL1.Location = new System.Drawing.Point(14, 83);
             this.stackL1.Name = "stackL1";
             this.stackL1.Size = new System.Drawing.Size(258, 35);
