@@ -76,7 +76,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(10, 173);
+            this.btnBack.Location = new System.Drawing.Point(9, 173);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(48, 42);
             this.btnBack.TabIndex = 1;
@@ -197,7 +197,7 @@
             // btn7
             // 
             this.btn7.Font = new System.Drawing.Font("BankGothic Lt BT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(10, 221);
+            this.btn7.Location = new System.Drawing.Point(9, 221);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(48, 42);
             this.btn7.TabIndex = 12;

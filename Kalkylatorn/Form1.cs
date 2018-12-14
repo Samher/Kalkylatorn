@@ -193,8 +193,9 @@ namespace Kalkylatorn
             }
             else
             {
-                stackL1.Text = "Error";
                 stack.RemoveAt(1);
+                UpdateDisplay();
+                stackL1.Text = "Error";
                 return;
             }
             stack.RemoveAt(1);
@@ -203,11 +204,13 @@ namespace Kalkylatorn
         //dividerar 1 med talet längst ned
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (stack.Count > 0)
+            if (stack.Count > 0 && stack[0] != 0)
             {
                 stack[0] = 1 / stack[0];
                 UpdateDisplay();
             }
+            else
+                stackL1.Text = "Error";
         }
 
         private void btnPow_Click(object sender, EventArgs e)
