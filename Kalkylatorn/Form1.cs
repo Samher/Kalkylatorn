@@ -106,7 +106,7 @@ namespace Kalkylatorn
                 stackL1.Text = "Error";
             }
         }
-        /*Denna funktion nyttjas av alla nummerknappar och skriver det nummer som syns på knappen man trycker på*/
+        //Denna funktion nyttjas av alla nummerknappar och skriver det nummer som syns på knappen man trycker på
         private void numbtn_Click(object sender, EventArgs e)
         {
             if (stackL1.Text.Length > 12)
