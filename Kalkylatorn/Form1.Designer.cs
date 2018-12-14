@@ -347,7 +347,7 @@
             this.btnPow.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPow.Location = new System.Drawing.Point(224, 223);
             this.btnPow.Name = "btnPow";
-            this.btnPow.Size = new System.Drawing.Size(48, 40);
+            this.btnPow.Size = new System.Drawing.Size(48, 42);
             this.btnPow.TabIndex = 23;
             this.btnPow.Text = "^";
             this.btnPow.UseVisualStyleBackColor = true;
